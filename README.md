@@ -27,3 +27,9 @@
 - User Auth - using passport.js
 
 - Every tweet might be having a hastag 
+
+
+
+- tweet and hastag implementation logic 
+    - for a tweet , first extract hashtag : service layer 
+    - 

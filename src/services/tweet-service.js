@@ -11,7 +11,7 @@ class TweetService {
     const content = data.content;
     // Form content fetch #
     let tags = content.match(/#[a-zA-Z0-9_]+/g); // regex is used to extract hashtags
-    tags = tags.map((tag) => tag.substr(1));
+    tags = tags.map((tag) => tag.substr(1)).map((tag) => tag.toLowerCase());
     // console.log(tags);
 
     const tweet = await this.tweetRepository.create(data); //create tweet

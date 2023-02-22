@@ -12,5 +12,5 @@ app.listen(3000, async () => {
   console.log("MongoDB connected");
 
   let ser = new TweetService();
-  await ser.create({ content: "Done with #refactor" });
+  await ser.create({ content: "New #LOWERCASE #TWEET" });
 });

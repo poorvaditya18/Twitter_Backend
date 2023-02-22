@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 // A tweet can have multiple hashtag
 // A hashtag can have multiple tweets
@@ -19,4 +19,4 @@ const hashtagSchema = mongoose.Schema({
 
 const Hashtag = mongoose.model("Hashtag", hashtagSchema);
 
-module.exports = Hashtag;
+export default Hashtag;

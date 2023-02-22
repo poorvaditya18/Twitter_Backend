@@ -1,8 +1,8 @@
-const express = require("express");
+import express from "express";
 
-const connect = require("./config/database");
+import { connect } from "./config/database.js";
 
-const TweetService = require("./services/tweet-service");
+import TweetService from "./services/tweet-service.js";
 
 const app = express();
 
@@ -11,8 +11,6 @@ app.listen(3000, async () => {
   await connect();
   console.log("MongoDB connected");
 
-  let service = new TweetService();
-  const tweet = await service.create({
-    content: "my working #twitter #Excited",
-  });
+  let ser = new TweetService();
+  await ser.create({ content: "Done with #refactor" });
 });

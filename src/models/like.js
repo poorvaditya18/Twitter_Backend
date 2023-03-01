@@ -6,7 +6,7 @@ const likeSchema = new mongoose.Schema(
     onModel: {
       type: String,
       required: true,
-      enum: ["Tweet", "Comment"], // either like on tweet or comment if we include stories then we can increase this enum
+      enum: ["Tweet", "Comment"], // either like on  a tweet or comment
     },
     likeable: {
       // whether you have liked a tweet or comment based on that we can store respective id's
@@ -19,7 +19,6 @@ const likeSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    
   },
   { timestamps: true }
 );

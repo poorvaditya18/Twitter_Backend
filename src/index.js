@@ -23,16 +23,16 @@ app.listen(3000, async () => {
   // let ser = new TweetService();
   // await ser.create({ content: "New #LOWERCASE #TWEET" });
 
-  const userRepo = new UserRepository();
-  const tweetRepo = new TweetRepository();
-  const tweets = await tweetRepo.getAll(0, 10);
-  // console.log(tweets);
-  // const user = await userRepo.create({
-  //   email: "aditya@gmail.com",
-  //   password: "1234",
-  //   name: "Aditya",
-  // });
-  const users = await userRepo.getAll();
-  const likeService = new LikeService();
-  await likeService.toggleLike(tweets[0].id, "Tweet", users[0].id);
+  // const userRepo = new UserRepository();
+  // const tweetRepo = new TweetRepository();
+  // const tweets = await tweetRepo.getAll(0, 10);
+  // // console.log(tweets);
+  // // const user = await userRepo.create({
+  // //   email: "aditya@gmail.com",
+  // //   password: "1234",
+  // //   name: "Aditya",
+  // // });
+  // const users = await userRepo.getAll();
+  // const likeService = new LikeService();
+  // await likeService.toggleLike(tweets[0].id, "Tweet", users[0].id);
 });

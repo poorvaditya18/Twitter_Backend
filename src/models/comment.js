@@ -6,7 +6,7 @@ const commentSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    user: {
+    userId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true,
@@ -21,6 +21,13 @@ const commentSchema = mongoose.Schema(
       required: true,
       refPath: "onModel", //refPath
     },
+    comments: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        refPath: "Comment",
+      },
+    ],
   },
   { timestamps: true }
 );

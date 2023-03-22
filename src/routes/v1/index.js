@@ -10,7 +10,7 @@ import { authenticate } from "../../middlewares/authenticate.js";
 
 const router = express.Router();
 
-//create tweet
+// create tweet
 // middleware -> authenticate
 router.post("/tweets", authenticate, createTweet);
 
@@ -19,7 +19,8 @@ router.get("/tweets/:id", getTweet);
 // toggle like
 router.post("/like/toggle", toggleLike);
 
-router.post("/comments", createComment);
+// comment -->
+router.post("/comments", authenticate, createComment);
 
 router.post("/signup", signup);
 

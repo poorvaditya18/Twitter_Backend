@@ -8,10 +8,17 @@ import ApiRoutes from "./routes/index.js";
 import { UserRepository, TweetRepository } from "./repository/index.js";
 import LikeService from "./services/like-service.js";
 
+import passport from "passport";
+import { passportAuth } from "./config/jwt-middleware.js";
+
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// initialising passport -->
+app.use(passport.initialize());
+passportAuth(passport);
 
 app.use("/api", ApiRoutes);
 

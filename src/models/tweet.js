@@ -20,6 +20,10 @@ const tweetSchema = new mongoose.Schema(
         ref: "Comment",
       },
     ],
+    //images url -> for s3 storage
+    image: {
+      type: String,
+    },
   },
   { timestamps: true } //createdAt updatedAt
 );

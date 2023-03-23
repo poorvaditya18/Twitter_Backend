@@ -5,17 +5,16 @@ import dotenv from "dotenv";
 dotenv.config();
 
 // aws configuration
-aws.config(
-  update({
-    region: process.env.AWS_REGION,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    accessKeyId: process.env.ACCESS_KEY_ID,
-  })
-);
+aws.config.update({
+  region: process.env.AWS_REGION,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  accessKeyId: process.env.ACCESS_KEY_ID,
+});
 
 // making s3 object
 const s3 = new aws.S3();
 
+// multer object -->
 const upload = multer({
   storage: multerS3({
     s3: s3,

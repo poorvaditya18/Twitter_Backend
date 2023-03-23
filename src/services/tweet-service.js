@@ -7,6 +7,7 @@ class TweetService {
   }
 
   async create(data) {
+    console.log(data);
     // tweet content
     const content = data.content;
     // Form content fetch #

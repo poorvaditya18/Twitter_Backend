@@ -32,4 +32,5 @@
 
 - tweet and hastag implementation logic 
     - for a tweet , first extract hashtag : service layer 
-    - 
+
+- JEST : https://how-to.dev/how-to-set-up-jest-for-es-module

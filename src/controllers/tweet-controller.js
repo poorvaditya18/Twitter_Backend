@@ -9,6 +9,7 @@ const tweetService = new TweetService();
 export const createTweet = async (req, res) => {
   try {
     // this is the middleware
+    // TODO -> upload multiple files  --> upload.array 
     singleUploader(req, res, async function (err, data) {
       if (err) {
         return res.status(500).json({
